@@ -6,9 +6,9 @@ namespace Assets.Code.Classes.Enemies
     abstract class Enemy : MonoBehaviour
     {
         [Tooltip ("The speed at which the enemy will fall.")]
-        [SerializeField] protected float _FallSpeed = 0f;
+        [SerializeField] protected float _FallSpeed = 200f;
         [Tooltip ("The Y-Axis boundary at which the enemy will be culled.")]
-        [SerializeField] protected float _CullBound = 0f;
+        [SerializeField] protected float _CullBound = -2.5f;
 
         protected Vector2 _Velocity = Vector2.zero;
         protected Transform _Transform = null;
