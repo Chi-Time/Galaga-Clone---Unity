@@ -15,7 +15,7 @@ namespace Assets.Code.Classes.Enemies
         {
             base.AssignReferences ();
 
-            this._EnemyType = Enums.EnemyTypes.Jelly;
+            this.EnemyType = Enums.EnemyTypes.Jelly;
             // Get the left and right bounds of the enemies movement.
             _LeftBound = _Transform.position.x + _LeftBound;
             _RightBound = _Transform.position.x + _RightBound;

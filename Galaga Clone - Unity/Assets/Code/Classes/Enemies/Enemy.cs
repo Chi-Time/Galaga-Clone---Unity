@@ -6,14 +6,12 @@ namespace Assets.Code.Classes.Enemies
     [RequireComponent (typeof (Rigidbody2D), typeof (Collider2D))]
     abstract class Enemy : MonoBehaviour
     {
-        public EnemyTypes EnemyType { get { return _EnemyType; } }
+        public EnemyTypes EnemyType { get; protected set; }
 
         [Tooltip ("The speed at which the enemy will fall.")]
         [SerializeField] protected float _FallSpeed = 200f;
         [Tooltip ("The Y-Axis boundary at which the enemy will be culled.")]
         [SerializeField] protected float _CullBound = -2.5f;
-        [Tooltip ("The type of enemy this is.")]
-        [SerializeField] protected EnemyTypes _EnemyType = 0;
 
         protected Vector2 _Velocity = Vector2.zero;
         protected Transform _Transform = null;
