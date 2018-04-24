@@ -11,21 +11,25 @@ namespace Assets.Code.Classes.Enemies
         [Tooltip ("The maximum right bound before the enemy will change direction.")]
         [SerializeField] protected float _RightBound = 10f;
 
-        protected override void Awake ()
+        protected override void AssignReferences ()
         {
-            base.Awake ();
+            base.AssignReferences ();
 
             _Velocity = new Vector2 (_DiagonalSpeed, -_FallSpeed) * Time.deltaTime;
         }
 
         protected override void Move ()
         {
+            CheckBounds ();
+            _Rigidbody2D.velocity = _Velocity;
+        }
+
+        protected void CheckBounds ()
+        {
             if (HasHitLeftBound ())
                 _Velocity = new Vector2 (_DiagonalSpeed, -_FallSpeed) * Time.deltaTime;
             else if (HasHitRightBound ())
                 _Velocity = new Vector2 (-_DiagonalSpeed, -_FallSpeed) * Time.deltaTime;
-
-            _Rigidbody2D.velocity = _Velocity;
         }
 
         protected bool HasHitRightBound ()
