@@ -10,7 +10,6 @@ namespace Assets.Code.Classes
         /// <summary>The range of the bullet before it's destroyed.</summary>
         [SerializeField] private float _Range = 15f;
 
-        private Transform _Transform = null;
         private Rigidbody2D _Rigidbody2D = null;
 
         private void Awake ()
@@ -21,7 +20,6 @@ namespace Assets.Code.Classes
 
         private void AssignReferences ()
         {
-            _Transform = GetComponent<Transform> ();
             _Rigidbody2D = GetComponent<Rigidbody2D> ();
             GetComponent<Collider2D> ().isTrigger = true;
         }
