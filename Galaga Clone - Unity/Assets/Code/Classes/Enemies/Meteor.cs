@@ -13,6 +13,7 @@ namespace Assets.Code.Classes.Enemies
         {
             base.AssignReferences ();
 
+            this._EnemyType = Enums.EnemyTypes.Meteor;
             _FallSpeed = Random.Range (_MinFallSpeed, _MaxFallSpeed);
         }
 

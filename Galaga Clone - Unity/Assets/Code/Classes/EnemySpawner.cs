@@ -7,8 +7,8 @@ namespace Assets.Code.Classes
 {
     class EnemySpawner : MonoBehaviour
     {
-        [SerializeField] private float _MinSpawnDelay = 0.5f;
-        [SerializeField] private float _MaxSpawnDelay = 1.25f;
+        [SerializeField] private float _MinSpawnDelay = 1.0f;
+        [SerializeField] private float _MaxSpawnDelay = 1.75f;
         [SerializeField] private Enemy[] _EnemyPrefabs = null;
 
         private void Awake ()

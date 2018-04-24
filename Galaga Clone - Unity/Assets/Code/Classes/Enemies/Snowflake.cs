@@ -5,7 +5,7 @@ namespace Assets.Code.Classes.Enemies
     class Snowflake : Enemy
     {
         [Tooltip ("The speed at which the enemy will move diagonally.")]
-        [SerializeField] protected float _DiagonalSpeed = 350f;
+        [SerializeField] protected float _DiagonalSpeed = 450f;
         [Tooltip ("The minimum left bound before the enemy will change direction.")]
         [SerializeField] protected float _LeftBound = -10f;
         [Tooltip ("The maximum right bound before the enemy will change direction.")]
@@ -15,6 +15,7 @@ namespace Assets.Code.Classes.Enemies
         {
             base.AssignReferences ();
 
+            this._EnemyType = Enums.EnemyTypes.Snowflake;
             _Velocity = new Vector2 (_DiagonalSpeed, -_FallSpeed) * Time.deltaTime;
         }
 
