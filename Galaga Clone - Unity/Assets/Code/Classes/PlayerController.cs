@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using Assets.Code.Enums;
+using Assets.Code.Classes.Weapons;
 
 namespace Assets.Code.Classes
 {
@@ -7,6 +9,8 @@ namespace Assets.Code.Classes
     {
         [Tooltip ("The speed of the player's movement in the world.")]
         [SerializeField] private float _MovementSpeed = 1000f;
+        [Tooltip ("The player's currently firing weapon.")]
+        [SerializeField] private Weapon _CurrentWeapon = null;
 
         private Vector2 _Velocity = Vector2.zero;
         private Rigidbody2D _Rigidbody2D = null;
@@ -39,6 +43,9 @@ namespace Assets.Code.Classes
         private void GetInput ()
         {
             _Velocity = new Vector2 (Input.GetAxis ("Horizontal"), 0f);
+
+            if (Input.GetButton ("Fire1") && _CurrentWeapon != null)
+                _CurrentWeapon.Fire ();
         }
 
         private void Move ()
@@ -51,6 +58,25 @@ namespace Assets.Code.Classes
         {
             const float dragAmount = 0.1f;
             _Velocity -= _Velocity * dragAmount;
+        }
+
+        public void SwitchWeapon (WeaponType weapon)
+        {
+            switch (weapon)
+            {
+                case WeaponType.Default:
+                    _CurrentWeapon = GetComponentInChildren<SingleShotWeapon> ();
+                    break;
+                case WeaponType.TripleShot:
+                    _CurrentWeapon = GetComponentInChildren<TripleShotWeapon> ();
+                    break;
+                case WeaponType.HelixShot:
+
+                    break;
+                case WeaponType.ScatterShot:
+
+                    break;
+            }
         }
     }
 }
