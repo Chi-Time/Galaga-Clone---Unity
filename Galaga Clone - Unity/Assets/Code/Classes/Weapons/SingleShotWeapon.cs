@@ -6,7 +6,11 @@ namespace Assets.Code.Classes.Weapons
     {
         protected override void Shoot ()
         {
-            Instantiate (_BulletPrefab, transform.parent.position + new Vector3 (0f, 1f, 0f), Quaternion.identity);
+            Instantiate (_BulletPrefab, transform.position + new Vector3 (0f, 1f, 0f), Quaternion.identity);
         }
+
+        public override void Enable () { }
+
+        public override void Disable () { }
     }
 }

@@ -11,8 +11,8 @@ namespace Assets.Code.Classes.Pickups
 
         protected override void Collected (Collider2D other)
         {
-            var weapon = Instantiate (_Weapon, other.transform.position, Quaternion.identity);
-            weapon.transform.SetParent (other.transform);
+            //var weapon = Instantiate (_Weapon, other.transform.position, Quaternion.identity);
+            //weapon.transform.SetParent (other.transform);
             other.GetComponent<PlayerController> ().SwitchWeapon (_WeaponType);
         }
     }

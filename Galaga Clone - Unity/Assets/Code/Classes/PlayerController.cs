@@ -28,6 +28,8 @@ namespace Assets.Code.Classes
         {
             _Rigidbody2D = GetComponent<Rigidbody2D> ();
             GetComponent<Collider2D> ().isTrigger = false;
+
+            _CurrentWeapon = GetComponent<SingleShotWeapon> ();
         }
 
         private void SetupRigidbody ()
@@ -68,19 +70,27 @@ namespace Assets.Code.Classes
             switch (weapon)
             {
                 case WeaponType.Default:
-                    _CurrentWeapon = GetComponentInChildren<SingleShotWeapon> ();
+                    _CurrentWeapon = GetComponent<SingleShotWeapon> ();
                     break;
                 case WeaponType.ForkShot:
-                    _CurrentWeapon = GetComponentInChildren<ForkShot> ();
+                    _CurrentWeapon.Disable ();
+                    _CurrentWeapon = GetComponent<ForkShot> ();
+                    _CurrentWeapon.Enable ();
                     break;
                 case WeaponType.TripleShot:
-                    _CurrentWeapon = GetComponentInChildren<TripleShotWeapon> ();
+                    _CurrentWeapon.Disable ();
+                    _CurrentWeapon = GetComponent<TripleShotWeapon> ();
+                    _CurrentWeapon.Enable ();
                     break;
                 case WeaponType.HelixShot:
-                    _CurrentWeapon = GetComponentInChildren<HelixShotWeapon> ();
+                    _CurrentWeapon.Disable ();
+                    _CurrentWeapon = GetComponent<HelixShotWeapon> ();
+                    _CurrentWeapon.Enable ();
                     break;
                 case WeaponType.ScatterShot:
-                    _CurrentWeapon = GetComponentInChildren<ScatterShotWeapon> ();
+                    _CurrentWeapon.Disable ();
+                    _CurrentWeapon = GetComponent<ScatterShotWeapon> ();
+                    _CurrentWeapon.Enable ();
                     break;
             }
         }
