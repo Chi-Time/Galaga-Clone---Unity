@@ -7,11 +7,14 @@ namespace Assets.Code.Classes
     [RequireComponent (typeof (Rigidbody2D), typeof (BoxCollider2D))]
     class PlayerController : MonoBehaviour
     {
+        [Tooltip ("The number of lives the player has before the game ends.")]
+        [SerializeField] private int _Lives = 3;
         [Tooltip ("The speed of the player's movement in the world.")]
         [SerializeField] private float _MovementSpeed = 1000f;
         [Tooltip ("The player's currently firing weapon.")]
         [SerializeField] private Weapon _CurrentWeapon = null;
 
+        private const int _MaxLives = 5;
         private Vector2 _Velocity = Vector2.zero;
         private Rigidbody2D _Rigidbody2D = null;
 
@@ -80,6 +83,28 @@ namespace Assets.Code.Classes
                     _CurrentWeapon = GetComponentInChildren<ScatterShotWeapon> ();
                     break;
             }
+        }
+
+        public void AddLives (int lives)
+        {
+            _Lives += lives;
+
+            if (_Lives >= _MaxLives)
+                _Lives = _MaxLives;
+        }
+
+        public void RemoveLives (int lives)
+        {
+            _Lives -= lives;
+
+            if (_Lives <= 0)
+                Kill ();
+        }
+
+        private void Kill ()
+        {
+            Destroy (this.gameObject);
+            Time.timeScale = 0.0f;
         }
     }
 }

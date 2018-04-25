@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1963065642441712}
   m_IsPrefabParent: 1
+--- !u!1 &1283614635109778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4669738994934552}
+  - component: {fileID: 114676527323145146}
+  m_Layer: 0
+  m_Name: Single Shot Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1963065642441712
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,8 +55,22 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4669738994934552}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4669738994934552
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283614635109778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4205261908377398}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50954626650115580
@@ -88,6 +118,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114676527323145146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283614635109778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff816e3b11430444b03bb5ea58965a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _FireRate: 0.2
+  _BulletPrefab: {fileID: 114365044945722628, guid: 272fa6f334fbe684da1c7777b25bc986,
+    type: 2}
 --- !u!114 &114829323040155988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,7 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789621ddaf9c3d14aa19ae35598dd4ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Lives: 3
   _MovementSpeed: 1000
+  _CurrentWeapon: {fileID: 114676527323145146}
 --- !u!212 &212430065071197734
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -131,7 +177,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 142adbcc702e2cb46809a5ce177da79f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
