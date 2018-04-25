@@ -8,6 +8,8 @@ namespace Assets.Code.Classes.Enemies
     {
         public EnemyTypes EnemyType { get { return _EnemyType; } }
 
+        [Tooltip ("The amount added to the score when this enemy is killed.")]
+        [SerializeField] protected uint _Score = 20;
         [Tooltip ("The speed at which the enemy will fall.")]
         [SerializeField] protected float _FallSpeed = 200f;
         [Tooltip ("The Y-Axis boundary at which the enemy will be culled.")]

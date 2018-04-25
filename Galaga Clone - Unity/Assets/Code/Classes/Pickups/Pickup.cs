@@ -8,7 +8,7 @@ namespace Assets.Code.Classes.Pickups
         [Tooltip ("The amount added to the score when this pickup is collected.")]
         [SerializeField] protected uint _Score = 20;
         [Tooltip ("How fast the object falls down the screen.")]
-        [SerializeField] protected float _FallSpeed = 300.0f;
+        [SerializeField] protected float _FallSpeed = 15.0f;
 
         /// <summary>Reference to this gameobjects Rigigbody2D component.</summary>
         protected Rigidbody2D _Rigidbody2D = null;
