@@ -70,7 +70,9 @@ namespace Assets.Code.Classes
             switch (weapon)
             {
                 case WeaponType.Default:
+                    _CurrentWeapon.Disable ();
                     _CurrentWeapon = GetComponent<SingleShotWeapon> ();
+                    _CurrentWeapon.Enable ();
                     break;
                 case WeaponType.ForkShot:
                     _CurrentWeapon.Disable ();

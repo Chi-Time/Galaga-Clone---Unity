@@ -35,7 +35,15 @@ namespace Assets.Code.Classes.Weapons
 
         protected abstract void Shoot ();
 
-        public abstract void Enable ();
-        public abstract void Disable ();
+        public virtual void Enable ()
+        {
+            this.enabled = true;
+        }
+
+        public virtual void Disable ()
+        {
+            _Timer -= _Timer;
+            this.enabled = false;
+        }
     }
 }

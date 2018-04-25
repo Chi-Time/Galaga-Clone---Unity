@@ -8,9 +8,5 @@ namespace Assets.Code.Classes.Weapons
         {
             Instantiate (_BulletPrefab, transform.position + new Vector3 (0f, 1f, 0f), Quaternion.identity);
         }
-
-        public override void Enable () { }
-
-        public override void Disable () { }
     }
 }

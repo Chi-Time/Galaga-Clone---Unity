@@ -19,7 +19,7 @@ namespace Assets.Code.Classes.Weapons
             base.Update ();
 
             if (HasRunOut ())
-                Disable ();
+                GetComponent<PlayerController> ().SwitchWeapon (Enums.WeaponType.Default);
         }
 
         protected bool HasRunOut ()
@@ -32,21 +32,13 @@ namespace Assets.Code.Classes.Weapons
             return false;
         }
 
-        /// <summary>Enable the weapon and set it up for use.</summary>
-        public override void Enable ()
-        {
-            // Reset the timer so that we count from the start again, then activate.
-            _LengthTimer -= _LengthTimer;
-            this.enabled = true;
-        }
-
         /// <summary>Disable the weapon as it's no longer being used.</summary>
         public override void Disable ()
         {
+            base.Disable ();
+
             // Inform the player to switch back to their default weapon and reset our timer, then de-activate.
-            GetComponent<PlayerController> ().SwitchWeapon (Enums.WeaponType.Default);
             _LengthTimer -= _LengthTimer;
-            this.enabled = false;
         }
     }
 }
