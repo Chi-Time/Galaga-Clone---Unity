@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 namespace Assets.Code.Classes.Pickups
 {
@@ -11,12 +12,17 @@ namespace Assets.Code.Classes.Pickups
         {
             if (other.CompareTag ("Player"))
             {
-                Collected ();
-                Invoke ("PickupEnded", _Length);
+                Collected (other);
+                StartCoroutine (PickupEnded (other));
                 Destroy (this.gameObject);
             }
         }
 
-        protected abstract void PickupEnded ();
+        protected virtual IEnumerator PickupEnded (Collider2D other)
+        {
+            yield return new WaitForSeconds (_Length);
+            
+
+        }
     }
 }

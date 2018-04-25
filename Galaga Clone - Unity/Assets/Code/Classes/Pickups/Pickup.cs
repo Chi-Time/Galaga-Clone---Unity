@@ -41,11 +41,11 @@ namespace Assets.Code.Classes.Pickups
         {
             if (other.CompareTag ("Player"))
             {
-                Collected ();
+                Collected (other);
                 Destroy (this.gameObject);
             }
         }
 
-        protected abstract void Collected ();
+        protected abstract void Collected (Collider2D other);
     }
 }
