@@ -85,6 +85,17 @@ namespace Assets.Code.Classes
             }
         }
 
+        public void Hit ()
+        {
+            ResetPosition ();
+            RemoveLives (1);
+        }
+
+        private void ResetPosition ()
+        {
+            _Rigidbody2D.MovePosition (Vector3.zero);
+        }
+
         public void AddLives (int lives)
         {
             _Lives += lives;
@@ -97,7 +108,7 @@ namespace Assets.Code.Classes
         {
             _Lives -= lives;
 
-            if (_Lives <= 0)
+            if (_Lives < 0)
                 Kill ();
         }
 

@@ -36,5 +36,14 @@ namespace Assets.Code.Classes
             _Rigidbody2D.AddForce (transform.up * _Speed, ForceMode2D.Impulse);
             Destroy (this.gameObject, _Range / _Speed);
         }
+
+        private void OnTriggerEnter2D (Collider2D other)
+        {
+            if (other.CompareTag ("Enemy"))
+            {
+                Destroy (other.gameObject);
+                Destroy (this.gameObject);
+            }
+        }
     }
 }

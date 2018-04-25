@@ -43,7 +43,10 @@ namespace Assets.Code.Classes.Enemies
             Move ();
 
             if (HasHitCullBound ())
+            {
+                GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ().RemoveLives (1);
                 Destroy (this.gameObject);
+            }
         }
 
         protected abstract void Move ();
@@ -54,6 +57,15 @@ namespace Assets.Code.Classes.Enemies
                 return true;
 
             return false;   
+        }
+
+        private void OnTriggerEnter2D (Collider2D other)
+        {
+            if (other.CompareTag ("Player"))
+            {
+                other.GetComponent<PlayerController> ().Hit ();
+                Destroy (this.gameObject);
+            }
         }
     }
 }
