@@ -2,7 +2,7 @@
 
 namespace Assets.Code.Classes.Pickups
 {
-    [RequireComponent (typeof (Rigidbody2D), typeof (Collider2D))]
+    [RequireComponent (typeof (Rigidbody2D), typeof (Collider2D), typeof (Rotator))]
     abstract class Pickup : MonoBehaviour
     {
         [Tooltip ("The amount added to the score when this pickup is collected.")]

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61632147716210596}
   - component: {fileID: 50434539705331164}
   - component: {fileID: 114917949424033528}
+  - component: {fileID: 114936530881569354}
   m_Layer: 0
   m_Name: Fork Shot Pickup
   m_TagString: Untagged
@@ -103,6 +104,18 @@ MonoBehaviour:
   _FallSpeed: 10
   _WeaponType: 1
   _Weapon: {fileID: 114155578970869082, guid: 9797c0f0f291cbd41b24338f57446bc7, type: 2}
+--- !u!114 &114936530881569354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487160851564906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007691a926ea6ce43a731a5a2ad67fd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _RotationSpeed: 150
 --- !u!212 &212259109580774270
 SpriteRenderer:
   m_ObjectHideFlags: 1
