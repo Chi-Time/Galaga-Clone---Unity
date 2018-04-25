@@ -67,14 +67,17 @@ namespace Assets.Code.Classes
                 case WeaponType.Default:
                     _CurrentWeapon = GetComponentInChildren<SingleShotWeapon> ();
                     break;
+                case WeaponType.ForkShot:
+                    _CurrentWeapon = GetComponentInChildren<ForkShot> ();
+                    break;
                 case WeaponType.TripleShot:
                     _CurrentWeapon = GetComponentInChildren<TripleShotWeapon> ();
                     break;
                 case WeaponType.HelixShot:
-
+                    _CurrentWeapon = GetComponentInChildren<HelixShotWeapon> ();
                     break;
                 case WeaponType.ScatterShot:
-
+                    _CurrentWeapon = GetComponentInChildren<ScatterShotWeapon> ();
                     break;
             }
         }
