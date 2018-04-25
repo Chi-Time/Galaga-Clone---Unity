@@ -7,10 +7,12 @@ namespace Assets.Code.Classes
 {
     class EnemySpawner : MonoBehaviour
     {
+        [Tooltip ("The minimum delay between enemy spawns.")]
         [SerializeField] private float _MinSpawnDelay = 1.0f;
+        [Tooltip ("The maximum delay between enemy spawns.")]
         [SerializeField] private float _MaxSpawnDelay = 1.75f;
+        [Tooltip ("The enemy prefabs to be spawned.")]
         [SerializeField] private Enemy[] _EnemyPrefabs = null;
-        [SerializeField] private Enemy[] _OrderedPrefabs = null;
 
         private void OrderPrefabs ()
         {
@@ -58,7 +60,7 @@ namespace Assets.Code.Classes
         private void SpawnSnowflakes ()
         {
             int index = (int)EnemyTypes.Snowflake;
-            float xSpawnPos = Random.Range (-9f, 9f);
+            float xSpawnPos = Random.Range (-8f, 8f);
             Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos, 15f, 0f), Quaternion.identity);
             Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos + 1f, 16f, 0f), Quaternion.identity);
             Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos + 2f, 17f, 0f), Quaternion.identity);
