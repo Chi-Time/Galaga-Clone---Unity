@@ -31,18 +31,18 @@ namespace Assets.Code.Classes
         private void Spawn ()
         {
             // Get the amount of different enemy types specified in the EnemyTypes enum.
-            int numberOfEnemyTypes = System.Enum.GetValues (typeof (EnemyTypes)).Length;
-            var enemyType = (EnemyTypes)Random.Range (0, numberOfEnemyTypes);
+            int numberOfEnemyTypes = System.Enum.GetValues (typeof (EnemyType)).Length;
+            var enemyType = (EnemyType)Random.Range (0, numberOfEnemyTypes);
 
             switch (enemyType)
             {
-                case EnemyTypes.Meteor:
+                case EnemyType.Meteor:
                     SpawnMeteor ();
                     break;
-                case EnemyTypes.Snowflake:
+                case EnemyType.Snowflake:
                     SpawnSnowflakes ();
                     break;
-                case EnemyTypes.Jelly:
+                case EnemyType.Jelly:
                     SpawnJellies ();
                     break;
             }
@@ -53,13 +53,13 @@ namespace Assets.Code.Classes
 
         private void SpawnMeteor ()
         {
-            int index = (int)EnemyTypes.Meteor;
+            int index = (int)EnemyType.Meteor;
             Instantiate (_EnemyPrefabs[index], new Vector3 (Random.Range (-9f, 9f), 15f, 0f), Quaternion.identity);
         }
 
         private void SpawnSnowflakes ()
         {
-            int index = (int)EnemyTypes.Snowflake;
+            int index = (int)EnemyType.Snowflake;
             float xSpawnPos = Random.Range (-8f, 8f);
             Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos, 15f, 0f), Quaternion.identity);
             Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos + 1f, 16f, 0f), Quaternion.identity);
@@ -68,7 +68,7 @@ namespace Assets.Code.Classes
 
         private void SpawnJellies ()
         {
-            int index = (int)EnemyTypes.Jelly;
+            int index = (int)EnemyType.Jelly;
             float xSpawnPos = Random.Range (-8f, 8f);
             Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos, 15f, 0f), Quaternion.identity);
             Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos + 1f, 14f, 0f), Quaternion.identity);

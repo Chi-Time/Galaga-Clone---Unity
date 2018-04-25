@@ -6,7 +6,7 @@ namespace Assets.Code.Classes.Enemies
     [RequireComponent (typeof (Rigidbody2D), typeof (Collider2D))]
     abstract class Enemy : MonoBehaviour
     {
-        public EnemyTypes EnemyType { get { return _EnemyType; } }
+        public EnemyType EnemyType { get { return _EnemyType; } }
 
         [Tooltip ("The amount added to the score when this enemy is killed.")]
         [SerializeField] protected uint _Score = 20;
@@ -14,7 +14,7 @@ namespace Assets.Code.Classes.Enemies
         [SerializeField] protected float _FallSpeed = 200f;
         [Tooltip ("The Y-Axis boundary at which the enemy will be culled.")]
         [SerializeField] protected float _CullBound = -2.5f;
-        [SerializeField] protected EnemyTypes _EnemyType = 0;
+        [SerializeField] protected EnemyType _EnemyType = 0;
 
         protected Vector2 _Velocity = Vector2.zero;
         protected Transform _Transform = null;
