@@ -11,12 +11,12 @@ namespace Assets.Code.Classes
         [SerializeField] private int _Lives = 3;
         [Tooltip ("The speed of the player's movement in the world.")]
         [SerializeField] private float _MovementSpeed = 1000f;
-        [Tooltip ("The player's currently firing weapon.")]
-        [SerializeField] private Weapon _CurrentWeapon = null;
-
+        
         private const int _MaxLives = 5;
         private Vector2 _Velocity = Vector2.zero;
+        private Weapon _CurrentWeapon = null;
         private Rigidbody2D _Rigidbody2D = null;
+
 
         private void Awake ()
         {
@@ -28,7 +28,6 @@ namespace Assets.Code.Classes
         {
             _Rigidbody2D = GetComponent<Rigidbody2D> ();
             GetComponent<Collider2D> ().isTrigger = false;
-
             _CurrentWeapon = GetComponent<SingleShotWeapon> ();
         }
 
