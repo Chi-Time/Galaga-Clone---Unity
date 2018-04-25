@@ -101,7 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _FallSpeed: 200
   _CullBound: -2.5
-  _DiagonalSpeed: 350
+  _EnemyType: 1
+  _DiagonalSpeed: 450
   _LeftBound: -9.5
   _RightBound: 9.5
 --- !u!212 &212583600689921270

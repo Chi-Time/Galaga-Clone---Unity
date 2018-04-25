@@ -10,20 +10,18 @@ namespace Assets.Code.Classes
         [SerializeField] private float _MinSpawnDelay = 1.0f;
         [SerializeField] private float _MaxSpawnDelay = 1.75f;
         [SerializeField] private Enemy[] _EnemyPrefabs = null;
-
-        private void Awake ()
-        {
-            OrderPrefabs ();
-        }
+        [SerializeField] private Enemy[] _OrderedPrefabs = null;
 
         private void OrderPrefabs ()
         {
             // Order the enemy prefabs so that they're in a logical order.
-            _EnemyPrefabs = _EnemyPrefabs.OrderBy (x => (int)x.EnemyType).ToArray ();
+            _EnemyPrefabs = _EnemyPrefabs.OrderBy (x => x.EnemyType).ToArray ();
         }
 
         private void Start ()
         {
+            OrderPrefabs ();
+
             float spawnDelay = Random.Range (_MinSpawnDelay, _MaxSpawnDelay);
             Invoke ("Spawn", spawnDelay);
         }

@@ -15,7 +15,6 @@ namespace Assets.Code.Classes.Enemies
         {
             base.AssignReferences ();
 
-            this.EnemyType = Enums.EnemyTypes.Snowflake;
             _Velocity = new Vector2 (_DiagonalSpeed, -_FallSpeed) * Time.deltaTime;
         }
 
