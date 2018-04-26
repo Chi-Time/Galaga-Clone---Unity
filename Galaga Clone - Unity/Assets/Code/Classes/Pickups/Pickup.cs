@@ -43,6 +43,7 @@ namespace Assets.Code.Classes.Pickups
             {
                 Collected (other);
                 Destroy (this.gameObject);
+                GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ().IncreaseScore (_Score);
             }
         }
 

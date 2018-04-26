@@ -75,14 +75,20 @@ namespace Assets.Code.Classes.Enemies
         protected virtual void OnDisable ()
         {
             SpawnPickup ();
+            GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ().IncreaseScore (_Score);
         }
 
         protected void SpawnPickup ()
         {
-            int choice = Random.Range (0, 25);
+            int choice = Random.Range (0, 6);
 
             if (choice < _PickupPrefabs.Length)
                 Instantiate (_PickupPrefabs[choice], _Transform.position, Quaternion.identity);
+        }
+
+        protected virtual void OnApplicationQuit ()
+        {
+            Destroy (this.gameObject);
         }
     }
 }
