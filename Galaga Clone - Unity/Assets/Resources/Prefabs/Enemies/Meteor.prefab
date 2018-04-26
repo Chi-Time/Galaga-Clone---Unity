@@ -109,6 +109,8 @@ MonoBehaviour:
   - {fileID: 114025019264600096, guid: 07e0ce21006fc4b49a69a8cd4866d090, type: 2}
   - {fileID: 114085261346957474, guid: dc6962049864930498ba9c5c8cf4cbdd, type: 2}
   - {fileID: 114342216775996676, guid: d7d7cb9791ca79b4e906a1f71a6952bc, type: 2}
+  - {fileID: 114198816672987620, guid: 919d5a940141977429421dfaeefbd550, type: 2}
+  - {fileID: 114717692183632154, guid: 67932a82f29b4b24a940216b11f08fea, type: 2}
   _MinFallSpeed: 200
   _MaxFallSpeed: 300
 --- !u!212 &212956470194737100

@@ -13,16 +13,14 @@ namespace Assets.Code.Classes.Pickups
             if (other.CompareTag ("Player"))
             {
                 Collected (other);
-                StartCoroutine (PickupEnded (other));
-                Destroy (this.gameObject);
+                Invoke ("PickupEnded", _Length);
+                this.gameObject.SetActive (false);
             }
         }
 
-        protected virtual IEnumerator PickupEnded (Collider2D other)
+        protected virtual void PickupEnded ()
         {
-            yield return new WaitForSeconds (_Length);
-            
-
+            Destroy (this.gameObject);
         }
     }
 }
