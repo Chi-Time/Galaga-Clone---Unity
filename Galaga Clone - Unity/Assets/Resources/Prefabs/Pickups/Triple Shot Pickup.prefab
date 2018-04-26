@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Score: 20
-  _FallSpeed: 15
+  _FallSpeed: 10
   _WeaponType: 2
 --- !u!212 &212131913030427770
 SpriteRenderer:

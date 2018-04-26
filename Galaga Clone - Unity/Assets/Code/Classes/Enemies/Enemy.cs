@@ -79,7 +79,7 @@ namespace Assets.Code.Classes.Enemies
 
         protected void SpawnPickup ()
         {
-            int choice = Random.Range (0, 10);
+            int choice = Random.Range (0, 25);
 
             if (choice < _PickupPrefabs.Length)
                 Instantiate (_PickupPrefabs[choice], _Transform.position, Quaternion.identity);

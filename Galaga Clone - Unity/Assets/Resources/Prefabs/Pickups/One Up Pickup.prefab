@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Score: 20
-  _FallSpeed: 15
+  _FallSpeed: 10
   _Lives: 1
 --- !u!114 &114716111806399020
 MonoBehaviour:

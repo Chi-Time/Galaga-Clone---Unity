@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Score: 20
-  _FallSpeed: 15
+  _FallSpeed: 10
   _WeaponType: 4
 --- !u!114 &114256336251677060
 MonoBehaviour:
