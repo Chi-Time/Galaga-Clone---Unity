@@ -7,5 +7,6 @@ namespace Assets.Code.Enums
         Meteor = 0,
         Snowflake = 1,
         Jelly = 2,
+        Terran = 3,
     }
 }

@@ -7,7 +7,7 @@ namespace Assets.Code.Classes.Weapons
         [Tooltip ("The delay before the weapon fires each projectile.")]
         [SerializeField] protected float _FireRate = 0.25f;
         [Tooltip ("The prefab bullet to shoot when firing the weapon.")]
-        [SerializeField] protected Bullet _BulletPrefab = null;
+        [SerializeField] protected GameObject _BulletPrefab = null;
 
         protected float _Timer = 0.0f;
 

@@ -70,9 +70,15 @@ namespace Assets.Code.Classes.Enemies
                 other.GetComponent<PlayerController> ().Hit ();
                 Destroy (this.gameObject);
             }
+            else if (other.CompareTag ("Bullet"))
+            {
+                Killed ();
+                Destroy (this.gameObject);
+                Destroy (other.gameObject);
+            }
         }
 
-        protected virtual void OnDisable ()
+        protected virtual void Killed ()
         {
             SpawnPickup ();
             GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ().IncreaseScore (_Score);
@@ -84,11 +90,6 @@ namespace Assets.Code.Classes.Enemies
 
             if (choice < _PickupPrefabs.Length)
                 Instantiate (_PickupPrefabs[choice], _Transform.position, Quaternion.identity);
-        }
-
-        protected virtual void OnApplicationQuit ()
-        {
-            Destroy (this.gameObject);
         }
     }
 }

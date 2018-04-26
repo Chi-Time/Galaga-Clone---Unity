@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Code.Classes
 {
@@ -29,6 +30,11 @@ namespace Assets.Code.Classes
 
             if (_Score >= _HighScore)
                 _HighScore = _Score;
+        }
+
+        public void GameOver ()
+        {
+            SceneManager.LoadScene ((2));
         }
     }
 }

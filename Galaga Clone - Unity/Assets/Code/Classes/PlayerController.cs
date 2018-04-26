@@ -125,8 +125,7 @@ namespace Assets.Code.Classes
 
         private void Kill ()
         {
-            Destroy (this.gameObject);
-            Time.timeScale = 0.0f;
+            FindObjectOfType<GameController> ().GameOver ();
         }
     }
 }

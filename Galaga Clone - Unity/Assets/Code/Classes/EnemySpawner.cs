@@ -45,6 +45,9 @@ namespace Assets.Code.Classes
                 case EnemyType.Jelly:
                     SpawnJellies ();
                     break;
+                case EnemyType.Terran:
+                    SpawnTerran ();
+                    break;
             }
 
             float spawnDelay = Random.Range (_MinSpawnDelay, _MaxSpawnDelay);
@@ -73,6 +76,12 @@ namespace Assets.Code.Classes
             Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos, 15f, 0f), Quaternion.identity);
             Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos + 1f, 14f, 0f), Quaternion.identity);
             Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos - 1f, 14f, 0f), Quaternion.identity);
+        }
+
+        private void SpawnTerran ()
+        {
+            int index = (int)EnemyType.Terran;
+            Instantiate (_EnemyPrefabs[index], new Vector3 (Random.Range (-8.5f, 8.5f), 15f, 0f), Quaternion.identity);
         }
     }
 }
