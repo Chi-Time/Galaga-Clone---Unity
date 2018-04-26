@@ -15,10 +15,12 @@ namespace Assets.Code.Classes.Enemies
         [Tooltip ("The Y-Axis boundary at which the enemy will be culled.")]
         [SerializeField] protected float _CullBound = -2.5f;
         [SerializeField] protected EnemyType _EnemyType = 0;
+        [SerializeField] protected Pickups.Pickup[] _PickupPrefabs = null;
 
         protected Vector2 _Velocity = Vector2.zero;
         protected Transform _Transform = null;
         protected Rigidbody2D _Rigidbody2D = null;
+        
 
         protected virtual void Awake ()
         {
@@ -68,6 +70,19 @@ namespace Assets.Code.Classes.Enemies
                 other.GetComponent<PlayerController> ().Hit ();
                 Destroy (this.gameObject);
             }
+        }
+
+        protected virtual void OnDisable ()
+        {
+            SpawnPickup ();
+        }
+
+        protected void SpawnPickup ()
+        {
+            int choice = Random.Range (0, 10);
+
+            if (choice < _PickupPrefabs.Length)
+                Instantiate (_PickupPrefabs[choice], _Transform.position, Quaternion.identity);
         }
     }
 }

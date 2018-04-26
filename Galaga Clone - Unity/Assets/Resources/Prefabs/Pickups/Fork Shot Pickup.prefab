@@ -103,7 +103,6 @@ MonoBehaviour:
   _Score: 20
   _FallSpeed: 10
   _WeaponType: 1
-  _Weapon: {fileID: 114155578970869082, guid: 9797c0f0f291cbd41b24338f57446bc7, type: 2}
 --- !u!114 &114936530881569354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,7 +148,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 99e2b518ca8e6734b98f62e70a45e2ed, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.66896534, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

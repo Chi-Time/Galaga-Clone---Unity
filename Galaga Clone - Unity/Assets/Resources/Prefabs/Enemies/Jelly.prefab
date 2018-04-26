@@ -99,9 +99,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e4df458f1d67a429c08f46e2fe977c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Score: 20
   _FallSpeed: 200
   _CullBound: -2.5
   _EnemyType: 2
+  _PickupPrefabs:
+  - {fileID: 114917949424033528, guid: d2d94692249466847aa181669ef29085, type: 2}
+  - {fileID: 114074720908960390, guid: 1c1bbcd14bf7f89499ce6e70891a0088, type: 2}
+  - {fileID: 114025019264600096, guid: 07e0ce21006fc4b49a69a8cd4866d090, type: 2}
+  - {fileID: 114085261346957474, guid: dc6962049864930498ba9c5c8cf4cbdd, type: 2}
+  - {fileID: 114342216775996676, guid: d7d7cb9791ca79b4e906a1f71a6952bc, type: 2}
   _DiagonalSpeed: 150
   _LeftBound: -0.5
   _RightBound: 0.5
