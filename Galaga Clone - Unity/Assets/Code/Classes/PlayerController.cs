@@ -10,7 +10,7 @@ namespace Assets.Code.Classes
         [Tooltip ("The number of lives the player has before the game ends.")]
         [SerializeField] private int _Lives = 3;
         [Tooltip ("The speed of the player's movement in the world.")]
-        [SerializeField] private float _MovementSpeed = 1000f;
+        [SerializeField] private float _MovementSpeed = 25f;
         
         private const int _MaxLives = 5;
         private Vector2 _Velocity = Vector2.zero;
@@ -55,7 +55,7 @@ namespace Assets.Code.Classes
         private void Move ()
         {
             ApplyDrag ();
-            _Rigidbody2D.velocity = _Velocity * _MovementSpeed * Time.deltaTime;
+            _Rigidbody2D.MovePosition (_Rigidbody2D.position + _Velocity * _MovementSpeed * Time.deltaTime);
         }
 
         private void ApplyDrag ()
@@ -104,7 +104,7 @@ namespace Assets.Code.Classes
 
         private void ResetPosition ()
         {
-            _Rigidbody2D.MovePosition (Vector3.zero);
+            _Rigidbody2D.position = Vector3.zero;
         }
 
         public void AddLives (int lives)

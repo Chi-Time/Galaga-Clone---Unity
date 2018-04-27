@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Speed: 17.5
-  _Range: 15
+  _Range: 18.5
 --- !u!212 &212425450286467294
 SpriteRenderer:
   m_ObjectHideFlags: 1
