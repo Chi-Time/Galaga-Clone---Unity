@@ -24,12 +24,19 @@ namespace Assets.Code.Classes
         [SerializeField] private uint _Score = 0;
         [SerializeField] private uint _HighScore = 0;
         [SerializeField] private uint _Multiplier = 1;
-
+        
         private string _FileName = "savedata.json";
+        private User_Interface.GameScreenController _GameScreenController = null;
 
         private void Awake ()
         {
+            _GameScreenController = FindObjectOfType<User_Interface.GameScreenController> ();
             GetSave ();
+        }
+
+        private void Start ()
+        {
+            _GameScreenController.UpdateScoreLabel (_Score);
         }
 
         private void GetSave ()
@@ -54,9 +61,13 @@ namespace Assets.Code.Classes
         public void IncreaseScore (uint score)
         {
             _Score += score * Multiplier;
-            
+            _GameScreenController.UpdateScoreLabel (_Score);
+
             if (IsNewHighScore ())
+            {
                 _HighScore = _Score;
+                _GameScreenController.UpdateHighScoreLabel (_HighScore);
+            }
         }
 
         private bool IsNewHighScore ()

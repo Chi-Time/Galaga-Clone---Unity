@@ -38,6 +38,11 @@ namespace Assets.Code.Classes
             _Rigidbody2D.freezeRotation = true;
         }
 
+        private void Start ()
+        {
+            FindObjectOfType<User_Interface.GameScreenController> ().UpdateLivesLabel (_Lives);
+        }
+
         private void Update ()
         {
             GetInput ();
@@ -56,7 +61,6 @@ namespace Assets.Code.Classes
         {
             ApplyDrag ();
             var speed = _Velocity * _MovementSpeed * Time.deltaTime;
-            Debug.Log ("Velocity: " + speed.x);
             _Rigidbody2D.MovePosition (_Rigidbody2D.position + speed);
         }
 
@@ -112,6 +116,7 @@ namespace Assets.Code.Classes
         public void AddLives (int lives)
         {
             _Lives += lives;
+            FindObjectOfType<User_Interface.GameScreenController> ().UpdateLivesLabel (_Lives);
 
             if (_Lives >= _MaxLives)
                 _Lives = _MaxLives;
@@ -120,6 +125,7 @@ namespace Assets.Code.Classes
         public void RemoveLives (int lives)
         {
             _Lives -= lives;
+            FindObjectOfType<User_Interface.GameScreenController> ().UpdateLivesLabel (_Lives);
 
             if (_Lives < 0)
                 Kill ();
