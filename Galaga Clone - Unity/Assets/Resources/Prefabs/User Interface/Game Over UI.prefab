@@ -736,6 +736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7f664a574df7d4288e5ef9b4a9e3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _HighScoreLabel: {fileID: 114751990256385286}
+  _SelectedButton: {fileID: 1287992885524658}
 --- !u!114 &114981040471597890
 MonoBehaviour:
   m_ObjectHideFlags: 1

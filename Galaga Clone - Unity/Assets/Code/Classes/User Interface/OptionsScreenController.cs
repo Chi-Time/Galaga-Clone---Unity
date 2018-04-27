@@ -120,14 +120,15 @@ namespace Assets.Code.Classes.User_Interface
             {
                 QualitySettings.vSyncCount = 1;
                 _GameSettings.VSyncCount = 1;
+                Application.targetFrameRate = 60;
             }
             else
             {
                 QualitySettings.vSyncCount = 0;
-                _GameSettings.VSyncCount = 0;   
+                _GameSettings.VSyncCount = 0;
+                Application.targetFrameRate = 60;
             }
-
-            Application.targetFrameRate = 60;
+            
             SetVsyncLabel ();
         }
 

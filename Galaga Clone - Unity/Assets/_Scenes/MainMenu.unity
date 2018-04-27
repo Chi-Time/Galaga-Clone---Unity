@@ -294,7 +294,7 @@ Prefab:
     - target: {fileID: 224574361419089528, guid: 8f414d2adfce0a84989cb229ace2f856,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -181.28333
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224574361419089528, guid: 8f414d2adfce0a84989cb229ace2f856,
         type: 2}
@@ -304,7 +304,7 @@ Prefab:
     - target: {fileID: 224574361419089528, guid: 8f414d2adfce0a84989cb229ace2f856,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 162.56667
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224304918583212202, guid: 8f414d2adfce0a84989cb229ace2f856,
         type: 2}
@@ -324,7 +324,7 @@ Prefab:
     - target: {fileID: 224304918583212202, guid: 8f414d2adfce0a84989cb229ace2f856,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -393.84998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224304918583212202, guid: 8f414d2adfce0a84989cb229ace2f856,
         type: 2}
@@ -334,7 +334,7 @@ Prefab:
     - target: {fileID: 224304918583212202, guid: 8f414d2adfce0a84989cb229ace2f856,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 162.56667
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224938272401777326, guid: 8f414d2adfce0a84989cb229ace2f856,
         type: 2}
@@ -354,7 +354,7 @@ Prefab:
     - target: {fileID: 224938272401777326, guid: 8f414d2adfce0a84989cb229ace2f856,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -606.4166
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224938272401777326, guid: 8f414d2adfce0a84989cb229ace2f856,
         type: 2}
@@ -364,7 +364,7 @@ Prefab:
     - target: {fileID: 224938272401777326, guid: 8f414d2adfce0a84989cb229ace2f856,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 162.56667
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f414d2adfce0a84989cb229ace2f856, type: 2}
