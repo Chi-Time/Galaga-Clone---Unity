@@ -1803,6 +1803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _VsyncLabel: {fileID: 114992009275978628}
+  _VsyncToggle: {fileID: 114302423722763682}
   _AntiAliasingLabel: {fileID: 114810781483177456}
   _VisualQualityLabel: {fileID: 114686053710251088}
 --- !u!114 &114561514789381368
