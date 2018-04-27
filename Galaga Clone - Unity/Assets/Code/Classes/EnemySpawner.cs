@@ -11,6 +11,8 @@ namespace Assets.Code.Classes
         [SerializeField] private float _MinSpawnDelay = 1.0f;
         [Tooltip ("The maximum delay between enemy spawns.")]
         [SerializeField] private float _MaxSpawnDelay = 1.75f;
+        [Tooltip ("The height at which the enemies will spawn from.")]
+        [SerializeField] private float _SpawnHeight = 20f;
         [Tooltip ("The enemy prefabs to be spawned.")]
         [SerializeField] private Enemy[] _EnemyPrefabs = null;
 
@@ -57,31 +59,31 @@ namespace Assets.Code.Classes
         private void SpawnMeteor ()
         {
             int index = (int)EnemyType.Meteor;
-            Instantiate (_EnemyPrefabs[index], new Vector3 (Random.Range (-9f, 9f), 15f, 0f), Quaternion.identity);
+            Instantiate (_EnemyPrefabs[index], new Vector3 (Random.Range (-9f, 9f), _SpawnHeight, 0f), Quaternion.identity);
         }
 
         private void SpawnSnowflakes ()
         {
             int index = (int)EnemyType.Snowflake;
             float xSpawnPos = Random.Range (-8f, 8f);
-            Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos, 15f, 0f), Quaternion.identity);
-            Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos + 1f, 16f, 0f), Quaternion.identity);
-            Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos + 2f, 17f, 0f), Quaternion.identity);
+            Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos, _SpawnHeight, 0f), Quaternion.identity);
+            Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos + 1f, _SpawnHeight + 1f, 0f), Quaternion.identity);
+            Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos + 2f, _SpawnHeight + 2f, 0f), Quaternion.identity);
         }
 
         private void SpawnJellies ()
         {
             int index = (int)EnemyType.Jelly;
             float xSpawnPos = Random.Range (-8f, 8f);
-            Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos, 15f, 0f), Quaternion.identity);
-            Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos + 1f, 14f, 0f), Quaternion.identity);
-            Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos - 1f, 14f, 0f), Quaternion.identity);
+            Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos, _SpawnHeight, 0f), Quaternion.identity);
+            Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos + 1f, _SpawnHeight - 1, 0f), Quaternion.identity);
+            Instantiate (_EnemyPrefabs[index], new Vector3 (xSpawnPos - 1f, _SpawnHeight - 1, 0f), Quaternion.identity);
         }
 
         private void SpawnTerran ()
         {
             int index = (int)EnemyType.Terran;
-            Instantiate (_EnemyPrefabs[index], new Vector3 (Random.Range (-8.5f, 8.5f), 15f, 0f), Quaternion.identity);
+            Instantiate (_EnemyPrefabs[index], new Vector3 (Random.Range (-8.5f, 8.5f), _SpawnHeight, 0f), Quaternion.identity);
         }
     }
 }

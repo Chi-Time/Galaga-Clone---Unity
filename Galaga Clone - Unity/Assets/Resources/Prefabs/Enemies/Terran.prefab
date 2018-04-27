@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c03602e02f98e4ab9685eb6fc3ba02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _FireRate: 0.6
+  _FireRate: 0.75
   _BulletPrefab: {fileID: 1405613613042298, guid: 1518ff5f18caa414099c5c07ba53799a,
     type: 2}
 --- !u!114 &114310454375867080
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 787c71fd25fbc5a4a92be3573135e155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _FireRate: 0.65
+  _FireRate: 0.75
   _BulletPrefab: {fileID: 1405613613042298, guid: 1518ff5f18caa414099c5c07ba53799a,
     type: 2}
 --- !u!114 &114377343964263318
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8ce28afb1a83b4e8bb343bcce048ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _FireRate: 0.7
+  _FireRate: 1
   _BulletPrefab: {fileID: 1405613613042298, guid: 1518ff5f18caa414099c5c07ba53799a,
     type: 2}
 --- !u!212 &212120817629183850
