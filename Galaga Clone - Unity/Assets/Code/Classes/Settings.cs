@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Code.Classes.User_Interface
+namespace Assets.Code.Classes
 {
     [System.Serializable]
     class Settings
