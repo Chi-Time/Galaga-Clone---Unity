@@ -1,11 +1,13 @@
 ﻿using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace Assets.Code.Classes.User_Interface
 {
     class OptionsScreenController : MonoBehaviour
     {
+        [SerializeField] private GameObject _SelectedButton = null;
         [SerializeField] private Text _VsyncLabel = null;
         [SerializeField] private Toggle _VsyncToggle = null;
         [SerializeField] private Text _AntiAliasingLabel = null;
@@ -15,6 +17,8 @@ namespace Assets.Code.Classes.User_Interface
 
         private void OnEnable ()
         {
+            EventSystem.current.SetSelectedGameObject (_SelectedButton, null);
+
             GetSettings ();
             SetAALabel ();
             SetQualityLabel ();
