@@ -55,7 +55,9 @@ namespace Assets.Code.Classes
         private void Move ()
         {
             ApplyDrag ();
-            _Rigidbody2D.MovePosition (_Rigidbody2D.position + _Velocity * _MovementSpeed * Time.deltaTime);
+            var speed = _Velocity * _MovementSpeed * Time.deltaTime;
+            Debug.Log ("Velocity: " + speed.x);
+            _Rigidbody2D.MovePosition (_Rigidbody2D.position + speed);
         }
 
         private void ApplyDrag ()

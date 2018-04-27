@@ -34,6 +34,7 @@ namespace Assets.Code.Classes
             QualitySettings.antiAliasing = settings.AALevel;
             QualitySettings.SetQualityLevel (settings.QualityLevel, true);
             QualitySettings.vSyncCount = settings.VSyncCount;
+            Application.targetFrameRate = 60;
         }
     }
 }
