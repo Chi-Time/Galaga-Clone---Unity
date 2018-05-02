@@ -19,6 +19,11 @@ namespace Assets.Code.Classes.User_Interface
             _ScoreLabel.text = "Score: " + score.ToString ();
         }
 
+        public void UpdateScoreLabel (uint score, int multiplier)
+        {
+            _ScoreLabel.text = "Score: " + score.ToString () + " " + multiplier.ToString() + "X";
+        }
+
         public void UpdateHighScoreLabel (uint highScore)
         {
             _HighScoreLabel.gameObject.SetActive (true);

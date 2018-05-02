@@ -61,7 +61,19 @@ namespace Assets.Code.Classes
         public void IncreaseScore (uint score)
         {
             _Score += score * Multiplier;
-            _GameScreenController.UpdateScoreLabel (_Score);
+
+            if (IsNewHighScore ())
+                _HighScore = _Score;
+
+            DisplayScore ();
+        }
+
+        private void DisplayScore ()
+        {
+            if (_Multiplier > 1)
+                _GameScreenController.UpdateScoreLabel (_Score, (int)_Multiplier);
+            else
+                _GameScreenController.UpdateScoreLabel (_Score);
 
             if (IsNewHighScore ())
             {
