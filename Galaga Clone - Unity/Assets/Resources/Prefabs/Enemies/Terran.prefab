@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c03602e02f98e4ab9685eb6fc3ba02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _FireRate: 0.75
+  _FireRate: 1
   _BulletPrefab: {fileID: 1405613613042298, guid: 1518ff5f18caa414099c5c07ba53799a,
     type: 2}
   _ShootSFX: {fileID: 8300000, guid: 50566c0ceb890b445aecd3ee0f8eaed1, type: 3}
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 787c71fd25fbc5a4a92be3573135e155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _FireRate: 0.75
+  _FireRate: 1
   _BulletPrefab: {fileID: 1405613613042298, guid: 1518ff5f18caa414099c5c07ba53799a,
     type: 2}
   _ShootSFX: {fileID: 8300000, guid: 50566c0ceb890b445aecd3ee0f8eaed1, type: 3}
@@ -225,7 +225,7 @@ MonoBehaviour:
   - {fileID: 114025019264600096, guid: 07e0ce21006fc4b49a69a8cd4866d090, type: 2}
   - {fileID: 114085261346957474, guid: dc6962049864930498ba9c5c8cf4cbdd, type: 2}
   - {fileID: 114342216775996676, guid: d7d7cb9791ca79b4e906a1f71a6952bc, type: 2}
-  _DeathSFX: {fileID: 8300000, guid: 9a253f83a89d1c0489b774ad3ab01cb4, type: 3}
+  _Explosion: {fileID: 1887722316591946, guid: 25ed80f04aa10b843a4ce1ed8550ab84, type: 2}
   _DiagonalSpeed: 150
   _LeftBound: -0.75
   _RightBound: 0.75
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8ce28afb1a83b4e8bb343bcce048ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _FireRate: 1
+  _FireRate: 1.2
   _BulletPrefab: {fileID: 1405613613042298, guid: 1518ff5f18caa414099c5c07ba53799a,
     type: 2}
   _ShootSFX: {fileID: 8300000, guid: 50566c0ceb890b445aecd3ee0f8eaed1, type: 3}

@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _MinSpawnDelay: 1
   _MaxSpawnDelay: 1.75
-  _SpawnHeight: 20
+  _SpawnHeight: 25
   _EnemyPrefabs:
   - {fileID: 114883891287732156, guid: 94ba25c6454e10a49918907a95907e07, type: 2}
   - {fileID: 114428812959053664, guid: e75693f4a2769cc40a5487f1eb469944, type: 2}
