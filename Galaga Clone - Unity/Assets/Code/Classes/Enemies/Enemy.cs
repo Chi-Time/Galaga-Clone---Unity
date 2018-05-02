@@ -16,6 +16,8 @@ namespace Assets.Code.Classes.Enemies
         [SerializeField] protected float _CullBound = -2.5f;
         [SerializeField] protected EnemyType _EnemyType = 0;
         [SerializeField] protected Pickups.Pickup[] _PickupPrefabs = null;
+        [Tooltip ("The sound clip played when the enemy dies.")]
+        [SerializeField] protected AudioClip _DeathSFX = null;
 
         protected Vector2 _Velocity = Vector2.zero;
         protected Transform _Transform = null;
@@ -81,6 +83,7 @@ namespace Assets.Code.Classes.Enemies
         protected virtual void Killed ()
         {
             SpawnPickup ();
+            AudioSource.PlayClipAtPoint (_DeathSFX, Camera.main.transform.position, 1.0f);
             GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ().IncreaseScore (_Score);
         }
 

@@ -111,6 +111,7 @@ MonoBehaviour:
   - {fileID: 114342216775996676, guid: d7d7cb9791ca79b4e906a1f71a6952bc, type: 2}
   - {fileID: 114198816672987620, guid: 919d5a940141977429421dfaeefbd550, type: 2}
   - {fileID: 114717692183632154, guid: 67932a82f29b4b24a940216b11f08fea, type: 2}
+  _DeathSFX: {fileID: 8300000, guid: 9a253f83a89d1c0489b774ad3ab01cb4, type: 3}
   _DiagonalSpeed: 450
   _LeftBound: -9.5
   _RightBound: 9.5

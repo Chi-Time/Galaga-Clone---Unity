@@ -102,8 +102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Score: 20
   _FallSpeed: 12
+  _CollectionSFX: {fileID: 8300000, guid: 878c9bce990f6834f9c13a543476e682, type: 3}
   _Length: 3
-  _MultiplerAmount: 2
+  _MultiplierAmount: 2
 --- !u!114 &114761609018209270
 MonoBehaviour:
   m_ObjectHideFlags: 1

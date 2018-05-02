@@ -9,8 +9,9 @@ namespace Assets.Code.Classes.Weapons
 
         protected float _LengthTimer = 0.0f;
 
-        protected virtual void Awake ()
+        protected override void Awake ()
         {
+            base.Awake ();
             this.enabled = false;
         }
 

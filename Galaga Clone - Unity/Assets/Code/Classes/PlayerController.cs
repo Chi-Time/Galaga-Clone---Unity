@@ -11,6 +11,8 @@ namespace Assets.Code.Classes
         [SerializeField] private int _Lives = 3;
         [Tooltip ("The speed of the player's movement in the world.")]
         [SerializeField] private float _MovementSpeed = 25f;
+        [Tooltip ("The sound played when the played has been hit.")]
+        [SerializeField] private AudioClip _HitSFX = null;
         
         private const int _MaxLives = 5;
         private Vector2 _Velocity = Vector2.zero;
@@ -106,6 +108,7 @@ namespace Assets.Code.Classes
         {
             ResetPosition ();
             RemoveLives (1);
+            AudioSource.PlayClipAtPoint (_HitSFX, Camera.main.transform.position, 1.0f);
         }
 
         private void ResetPosition ()

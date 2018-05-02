@@ -14,6 +14,7 @@ namespace Assets.Code.Classes.Pickups
                 Collected (other);
                 Invoke ("PickupEnded", _Length);
                 this.gameObject.SetActive (false);
+                AudioSource.PlayClipAtPoint (_CollectionSFX, Camera.main.transform.position, 1.0f);
             }
         }
 

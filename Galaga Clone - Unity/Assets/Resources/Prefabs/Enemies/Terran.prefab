@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114146038909363332}
   - component: {fileID: 114310454375867080}
   - component: {fileID: 114817861879207264}
+  - component: {fileID: 82843669152198520}
   m_Layer: 0
   m_Name: Terran
   m_TagString: Enemy
@@ -91,6 +92,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!82 &82843669152198520
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1070815161867634}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114146038909363332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,6 +186,7 @@ MonoBehaviour:
   _FireRate: 0.75
   _BulletPrefab: {fileID: 1405613613042298, guid: 1518ff5f18caa414099c5c07ba53799a,
     type: 2}
+  _ShootSFX: {fileID: 8300000, guid: 50566c0ceb890b445aecd3ee0f8eaed1, type: 3}
 --- !u!114 &114310454375867080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,6 +201,7 @@ MonoBehaviour:
   _FireRate: 0.75
   _BulletPrefab: {fileID: 1405613613042298, guid: 1518ff5f18caa414099c5c07ba53799a,
     type: 2}
+  _ShootSFX: {fileID: 8300000, guid: 50566c0ceb890b445aecd3ee0f8eaed1, type: 3}
 --- !u!114 &114377343964263318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,6 +225,7 @@ MonoBehaviour:
   - {fileID: 114025019264600096, guid: 07e0ce21006fc4b49a69a8cd4866d090, type: 2}
   - {fileID: 114085261346957474, guid: dc6962049864930498ba9c5c8cf4cbdd, type: 2}
   - {fileID: 114342216775996676, guid: d7d7cb9791ca79b4e906a1f71a6952bc, type: 2}
+  _DeathSFX: {fileID: 8300000, guid: 9a253f83a89d1c0489b774ad3ab01cb4, type: 3}
   _DiagonalSpeed: 150
   _LeftBound: -0.75
   _RightBound: 0.75
@@ -159,6 +243,7 @@ MonoBehaviour:
   _FireRate: 1
   _BulletPrefab: {fileID: 1405613613042298, guid: 1518ff5f18caa414099c5c07ba53799a,
     type: 2}
+  _ShootSFX: {fileID: 8300000, guid: 50566c0ceb890b445aecd3ee0f8eaed1, type: 3}
 --- !u!212 &212120817629183850
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114728193697044070}
   - component: {fileID: 114661112502196068}
   - component: {fileID: 114476797003970182}
+  - component: {fileID: 82698814867032294}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -60,7 +61,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -93,6 +94,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!82 &82698814867032294
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1963065642441712}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114102133585519438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,6 +188,7 @@ MonoBehaviour:
   _FireRate: 0.3
   _BulletPrefab: {fileID: 1654728604760100, guid: 272fa6f334fbe684da1c7777b25bc986,
     type: 2}
+  _ShootSFX: {fileID: 8300000, guid: b9e18545ad9c9ac4582420eec62b118f, type: 3}
   _Length: 5
 --- !u!114 &114178307181464278
 MonoBehaviour:
@@ -122,6 +204,7 @@ MonoBehaviour:
   _FireRate: 0.2
   _BulletPrefab: {fileID: 1654728604760100, guid: 272fa6f334fbe684da1c7777b25bc986,
     type: 2}
+  _ShootSFX: {fileID: 8300000, guid: d3f5c3d7c217da94f8864759a874bb0e, type: 3}
 --- !u!114 &114476797003970182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,6 +219,7 @@ MonoBehaviour:
   _FireRate: 0.25
   _BulletPrefab: {fileID: 1654728604760100, guid: 272fa6f334fbe684da1c7777b25bc986,
     type: 2}
+  _ShootSFX: {fileID: 8300000, guid: 7ddd23ee983ec6f469c80e03912ddf1e, type: 3}
   _Length: 3
 --- !u!114 &114661112502196068
 MonoBehaviour:
@@ -151,6 +235,7 @@ MonoBehaviour:
   _FireRate: 0.35
   _BulletPrefab: {fileID: 1654728604760100, guid: 272fa6f334fbe684da1c7777b25bc986,
     type: 2}
+  _ShootSFX: {fileID: 8300000, guid: 6524b0267ec7ebe4097b154725c21c0b, type: 3}
   _Length: 2
 --- !u!114 &114728193697044070
 MonoBehaviour:
@@ -166,6 +251,7 @@ MonoBehaviour:
   _FireRate: 0.3
   _BulletPrefab: {fileID: 1654728604760100, guid: 272fa6f334fbe684da1c7777b25bc986,
     type: 2}
+  _ShootSFX: {fileID: 8300000, guid: 7ddd23ee983ec6f469c80e03912ddf1e, type: 3}
   _Length: 3
 --- !u!114 &114829323040155988
 MonoBehaviour:
@@ -179,7 +265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Lives: 3
-  _MovementSpeed: 1000
+  _MovementSpeed: 25
+  _HitSFX: {fileID: 8300000, guid: 9a253f83a89d1c0489b774ad3ab01cb4, type: 3}
 --- !u!212 &212430065071197734
 SpriteRenderer:
   m_ObjectHideFlags: 1

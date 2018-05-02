@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Score: 20
   _FallSpeed: 10
+  _CollectionSFX: {fileID: 8300000, guid: 9a253f83a89d1c0489b774ad3ab01cb4, type: 3}
   _WeaponType: 2
 --- !u!212 &212131913030427770
 SpriteRenderer:
