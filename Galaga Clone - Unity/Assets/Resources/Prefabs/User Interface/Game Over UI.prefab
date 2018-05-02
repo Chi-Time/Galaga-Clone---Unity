@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 222662657250032686}
   - component: {fileID: 114004668887003166}
   - component: {fileID: 114195213454039184}
+  - component: {fileID: 114952722018157176}
   m_Layer: 5
   m_Name: Restart Game Button
   m_TagString: Untagged
@@ -177,6 +178,7 @@ GameObject:
   - component: {fileID: 222585575581711276}
   - component: {fileID: 114124524830673312}
   - component: {fileID: 114554202509033272}
+  - component: {fileID: 114599544441496492}
   m_Layer: 5
   m_Name: Menu Button
   m_TagString: Untagged
@@ -211,6 +213,7 @@ GameObject:
   - component: {fileID: 224730721855168120}
   - component: {fileID: 222465131605883832}
   - component: {fileID: 114596954258695694}
+  - component: {fileID: 114113351999607522}
   m_Layer: 5
   m_Name: Title Text
   m_TagString: Untagged
@@ -317,6 +320,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114113351999607522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1869441353089278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225616dd1db148a4bab679759a06445d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SwitchRate: 0.5
+  _FirstColor: {r: 1, g: 1, b: 1, a: 1}
+  _SecondColor: {r: 0.8980392, g: 0.5294118, b: 1, a: 1}
 --- !u!114 &114124524830673312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -611,6 +628,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Game Over
+--- !u!114 &114599544441496492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761123580540254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c523fd6ea5199d04995bb23ded685e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _HoverColor: {r: 0.547, g: 0.4371473, b: 0.14878401, a: 1}
 --- !u!114 &114660807888824172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -738,6 +767,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _HighScoreLabel: {fileID: 114751990256385286}
   _SelectedButton: {fileID: 1287992885524658}
+--- !u!114 &114952722018157176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1287992885524658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c523fd6ea5199d04995bb23ded685e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _HoverColor: {r: 0.547, g: 0.4371473, b: 0.14878401, a: 1}
 --- !u!114 &114981040471597890
 MonoBehaviour:
   m_ObjectHideFlags: 1
